@@ -107,6 +107,7 @@ BOOST_AUTO_TEST_CASE(event_hub_multithreading_events)
 
 		// check that all events have been consumed
 		BOOST_CHECK(testlist.empty());
+		BOOST_CHECK(!event_hub.HasEvents(evnt_key));
 	});
 
 
